@@ -1,0 +1,31 @@
+= Giraffe
+
+Generate graphs of the partials your Rails app uses    
+
+== Install
+
+    $ gem install giraffe
+
+== Dependencies
+
+* ruby-graphviz
+* graphviz
+
+== Usage
+    
+    g = Giraffe.new("/path/to/app/views")
+    g.generate("graph.png")
+    
+Or, more succinctly:
+    
+    Giraffe.generate("/path/to/app/views", "graph.png")
+
+== giraffe commandline
+
+    $ giraffe /path/to/app/views/ graph.png
+    
+== Todo
+
+It's pretty naive at the moment, doesn't deal with anything other than partials included by name etc...
+
+Could do with being a bit more intelligent.

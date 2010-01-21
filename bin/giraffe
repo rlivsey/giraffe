@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'lib/giraffe.rb'
+
+path, out = ARGV
+
+abort "please specify a template path and output image (giraffe /path/to/templates out.png)" unless path && out
+
+Giraffe.generate(path, out)
+
+puts "done"
